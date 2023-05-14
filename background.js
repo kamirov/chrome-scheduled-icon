@@ -29,8 +29,6 @@ function getIcon() {
     if (hour >= 20 && hour < 23) return icons.french;
   }
 
-  console.log('everything', day, hour)
-
   return icons.default;
 }
 
