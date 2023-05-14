@@ -1,9 +1,9 @@
 // Define the flag icons
 const icons = {
-  france: 'icons/france.png',
-  spain: 'icons/spain.png',
-  india: 'icons/india.png',
-  russia: 'icons/russia.png',
+  french: 'icons/french.png',
+  spanish: 'icons/spanish.png',
+  hindi: 'icons/hindi.png',
+  russian: 'icons/russian.png',
   default: 'icons/default.png',
 };
 
@@ -13,22 +13,23 @@ function getIcon() {
   const hour = now.getHours();
   const day = now.getDay();
 
-  if (day === 1 || day === 3 || day === 5 || day === 7) { // Monday, Wednesday, Friday, Sunday
-    if (hour >= 8 && hour < 11) return icons.france;
-    if (hour >= 11 && hour < 14) return icons.spain;
-    if (hour >= 14 && hour < 15) return icons.russia;
-    if (hour >= 15 && hour < 17) return icons.india;
-    if (hour >= 17 && hour < 20) return icons.france;
-    if (hour >= 20 && hour < 23) return icons.spain;
+  if (day === 1 || day === 3 || day === 5 || day === 0) { // Monday, Wednesday, Friday, Sunday
+    if (hour >= 8 && hour < 11) return icons.french;
+    if (hour >= 11 && hour < 14) return icons.spanish;
+    if (hour >= 14 && hour < 15) return icons.russian;
+    if (hour >= 15 && hour < 17) return icons.hindi;
+    if (hour >= 17 && hour < 20) return icons.french;
+    if (hour >= 20 && hour < 23) return icons.spanish;
   } else if (day === 2 || day === 4 || day === 6) { // Tuesday, Thursday, Saturday
-    if (hour >= 8 && hour < 11) return icons.spain;
-    if (hour >= 11 && hour < 14) return icons.france;
-    if (hour >= 14 && hour < 15) return icons.spain;
-    if (hour >= 15 && hour < 17) return icons.india;
-    if (hour >= 17 && hour < 20) return icons.spain;
-    if (hour >= 20 && hour < 23) return icons.france;
-
+    if (hour >= 8 && hour < 11) return icons.spanish;
+    if (hour >= 11 && hour < 14) return icons.french;
+    if (hour >= 14 && hour < 15) return icons.spanish;
+    if (hour >= 15 && hour < 17) return icons.hindi;
+    if (hour >= 17 && hour < 20) return icons.spanish;
+    if (hour >= 20 && hour < 23) return icons.french;
   }
+
+  console.log('everything', day, hour)
 
   return icons.default;
 }
