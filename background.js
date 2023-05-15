@@ -35,7 +35,7 @@ function getIcon() {
 // This function updates the browser action icon
 function updateIcon() {
   const icon = getIcon();
-  chrome.action.setIcon({ path: icon });
+  chrome.browserAction.setIcon({ path: icon });
 }
 
 // Update the icon when the extension is installed
